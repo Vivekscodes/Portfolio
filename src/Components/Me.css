@@ -1,0 +1,186 @@
+.se {
+    min-height: 100vh;
+    background-color: #1a1a1a;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+
+    margin: 0 auto;
+}
+
+.Me {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    animation: fadeIn 1s ease-out;
+}
+
+.avat {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hell {
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* .avat::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 20%;
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    border: 3px solid burlywood;
+    animation: rotate 10s linear infinite;
+} */
+
+.cover {
+    border: 4px solid rgba(222, 184, 135, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cover:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(222, 184, 135, 0.2);
+}
+
+.ab {
+    color: white;
+    animation: slideIn 1s ease-out;
+}
+
+.ab h2 {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: normal;
+    margin-bottom: 2rem;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, burlywood, transparent);
+    margin: 2rem 0;
+}
+
+.social-icons {
+    margin-top: 2rem;
+}
+
+.social-icons h1 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: white;
+    font-family: arial;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .se {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+    }
+
+    .Me {
+        order: -1;
+    }
+
+    .avat {
+        width: 300px;
+        height: 300px;
+    }
+
+    .ab h2 {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .social-icons {
+        text-align: center;
+    }
+
+    .social-icons h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Text Selection */
+::selection {
+    background: burlywood;
+    color: #1a1a1a;
+}
+
+/* Scroll Animation */
+.ab {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

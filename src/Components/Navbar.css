@@ -1,0 +1,130 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.logo {
+    height: 10px;
+    /* Adjust based on your navbar height */
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    padding-top: 15px;
+    height: 70px;
+    /* Adjust based on your logo size */
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.navbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.right {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.list {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    align-items: center;
+    list-style: none;
+}
+
+.list a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.list a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: burlywood;
+    transition: width 0.3s ease;
+}
+
+.list a:hover {
+    color: burlywood;
+}
+
+.list a:hover::after {
+    width: 100%;
+}
+
+/* Active state */
+.list a.active {
+    color: burlywood;
+}
+
+.list a.active::after {
+    width: 100%;
+}
+
+/* Scroll Animation */
+.navbar.scrolled {
+    background: rgba(26, 26, 26, 0.98);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .list {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .list a {
+        font-size: 1rem;
+        padding: 0.3rem 0.8rem;
+    }
+
+    .logo img {
+        display: none;
+        /* Slightly smaller on mobile */
+    }
+}
+
+/* Animation for navbar appearance */
+/* @keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+} */
+/* 
+.navbar {
+    animation: slideDown 0.5s ease-out;
+} */
