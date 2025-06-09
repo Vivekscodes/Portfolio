@@ -7,6 +7,26 @@ const Projects = () => {
             <div className="cards">
                 <div className="card">
                     <div className="avatar1">
+                        <img src="agent.jpeg" alt="cover" className="cover" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
+                    </div>
+                    <div className="card_content">
+                        <h3>Stella</h3>
+                        <p>An AI research assistant which helps you to deep research on any topic.</p>
+                    </div>
+                    <button className='btn' onClick={() => window.open("https://github.com/Vivekscodes/stella")}>Click to visit</button>
+                </div>
+                <div className="card">
+                    <div className="avatar1">
+                        <img src="git agent.jpg" alt="cover" className="cover" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
+                    </div>
+                    <div className="card_content">
+                        <h3>Git Fixer</h3>
+                        <p>An automated CLI tool which can increase your git commits automatically.</p>
+                    </div>
+                    <button className='btn' onClick={() => window.open("")}>Click to visit</button>
+                </div>
+                <div className="card">
+                    <div className="avatar1">
                         <img src="cover.webp" alt="cover" className="cover" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
                     </div>
                     <div className="card_content">
@@ -25,6 +45,16 @@ const Projects = () => {
                         <p>It is an online code editor with feautres like code sharing AI code completion and many more</p>
                     </div>
                     <button className='btn' onClick={() => window.open("https://github.com/Vivekscodes/CompileX")}>Click to visit</button>
+                </div>
+                <div className="card">
+                    <div className="avatar1">
+                        <img src="Xamin.png" alt="cover" className="cover" style={{ objectFit: 'cover', width: '100%', height: '120%' }} />
+                    </div>
+                    <div className="card_content">
+                        <h3>Xamin</h3>
+                        <p>It is an online Platform developed to reduce the risk of Paper leaks.</p>
+                    </div>
+                    <button className='btn' onClick={() => window.open("https://github.com/Vivekscodes/Xamin")}>Click to visit</button>
                 </div>
                 <div className="card">
                     <div className="avatar1">

@@ -30,7 +30,7 @@ const Me = () => {
                 </hr>
                 <div className="social-icons">
                     <h1 style={{ color: 'white', fontSize: '30px', fontFamily: 'arial' }}>Connect with me:</h1>
-                    <a href="https://www.linkedin.com/in/vivek-singh-7b3a741b1/" target="_blank" rel="noopener noreferrer" classname="linkedin-icon">
+                    <a href="..." target="_blank" rel="noopener noreferrer" className="linkedin-icon">
                         <FaLinkedin style={{ fontSize: '2em', color: '#0077B5' }} />
                     </a>
                     <a href="https://github.com/Vivekscodes" target="_blank" rel="noopener noreferrer" className="github-icon">

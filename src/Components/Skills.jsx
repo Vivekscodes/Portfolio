@@ -28,6 +28,20 @@ const Skills = () => {
                     <p style={{ display: 'inline', padding: '10px', color: 'white', fontSize: '20px', fontFamily: 'arial', backgroundColor: 'black' }}>Teamwork</p>
                     <p style={{ display: 'inline', padding: '10px', color: 'white', fontSize: '20px', fontFamily: 'arial', backgroundColor: 'black' }}>Leadership</p>
                 </div>
+                <h1 style={{ color: 'blue', fontSize: '30px', fontFamily: 'arial' }}>Programming Languages</h1>
+                <div className="language">
+                    <p style={{ display: 'inline', padding: '10px', color: 'white', fontSize: '20px', fontFamily: 'arial', backgroundColor: 'black' }}>C</p>
+                    <p style={{ display: 'inline', padding: '10px', color: 'white', fontSize: '20px', fontFamily: 'arial', backgroundColor: 'black' }}>C++</p>
+                    <p style={{ display: 'inline', padding: '10px', color: 'white', fontSize: '20px', fontFamily: 'arial', backgroundColor: 'black' }}>Java</p>
+                    <p style={{ display: 'inline', padding: '10px', color: 'white', fontSize: '20px', fontFamily: 'arial', backgroundColor: 'black' }}>Python</p>
+                </div>
+                <h1 style={{ color: 'blue', fontSize: '30px', fontFamily: 'arial' }}>Frameworks</h1>
+                <div className="language">
+                    <p style={{ display: 'inline', padding: '10px', color: 'white', fontSize: '20px', fontFamily: 'arial', backgroundColor: 'black' }}>LangChain</p>
+                    <p style={{ display: 'inline', padding: '10px', color: 'white', fontSize: '20px', fontFamily: 'arial', backgroundColor: 'black' }}>LangGraph</p>
+                    <p style={{ display: 'inline', padding: '10px', color: 'white', fontSize: '20px', fontFamily: 'arial', backgroundColor: 'black' }}>Numpy</p>
+                    <p style={{ display: 'inline', padding: '10px', color: 'white', fontSize: '20px', fontFamily: 'arial', backgroundColor: 'black' }}>Pandas</p>
+                </div>
             </div>
             <div className="riht">
                 <div className="avat">

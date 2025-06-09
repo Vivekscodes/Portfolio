@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './ContactMe.css';
-
+import ThankYou from './Thanku';
 const ContactMe = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         message: ''
     });
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
     const handleChange = (e) => {
         setFormData({
@@ -15,8 +16,18 @@ const ContactMe = () => {
             [e.target.name]: e.target.value
         });
     };
+    const handleValidation = (e) => {
+        if (!formData.name || !formData.email || !formData.message) {
+
+            return false;
+        }
+        return true;
+    };
 
     const handleSubmit = (e) => {
+        if (!handleValidation(e)) {
+            return;
+        }
         e.preventDefault();
 
         // Replace these with your EmailJS credentials
@@ -32,13 +43,16 @@ const ContactMe = () => {
             '6eFagDrGVGSEwKeTf'
         )
             .then((response) => {
-                alert('Message sent successfully!');
+                setIsSubmitted(true);
                 setFormData({ name: '', email: '', message: '' });
             })
             .catch((error) => {
                 alert('Failed to send message. Please try again.');
             });
     };
+    if (isSubmitted) {
+        return <ThankYou />;
+    }
 
     return (
         <div className='ContactMe'>
@@ -74,7 +88,7 @@ const ContactMe = () => {
                         rows="5"
                     />
                 </div>
-                <button type="submit">Send Message</button>
+                <button type="submit" onClick={handleSubmit}>Send Message</button>
             </form>
         </div>
     );

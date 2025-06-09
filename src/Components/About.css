@@ -16,7 +16,7 @@
 
 .content-wrapper {
     max-width: 1200px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     padding: 2rem;
     position: relative;
     z-index: 2;
@@ -24,7 +24,7 @@
 
 /* Greeting Text Styles */
 .greeting-text {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .hello-text {
@@ -70,6 +70,25 @@
     animation: fadeIn 1s ease-out 0.5s forwards;
     opacity: 0;
 }
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+.avatar-image {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+
 
 .typewriter-text {
     font-size: 2.5rem !important;
@@ -194,16 +213,7 @@
 @media (max-width: 768px) {
     .about {
         display: flex;
-        flex-direction: column;
-    }
-
-    .image-container {
-        order: -1;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-
-
+        flex-direction: column-reverse;
     }
 
 
@@ -213,13 +223,6 @@
 
     .introduction {
         font-size: 2rem;
-    }
-
-    .avatar {
-        width: 320px;
-        height: 320px;
-        margin-top: 20px;
-        /* Space from the top */
     }
 
     .name {
@@ -238,6 +241,11 @@
     .righ {
         display: none;
     }
+   
+    .avatar-image{
+        width: 250px;
+        height: 250px;
+    }
 }
 
 /* Add some floating particles in the background */
@@ -249,7 +257,7 @@
     background: radial-gradient(circle, rgba(0, 255, 136, 0.1) 0%, transparent 70%);
     border-radius: 50%;
     animation: float 8s infinite;
-    top: 20%;
+    top: 10%;
     left: 10%;
 }
 
@@ -294,40 +302,6 @@
 }
 
 
-.avatar {
-    width: 300px;
-    height: 300px;
-    position: relative;
-    border-radius: 50%;
-    padding: 8px;
-    background: linear-gradient(45deg, burlywood, #f39c12);
-    animation: borderRotate 8s linear infinite;
-    margin-top: 60px;
-}
-
-.avatar::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    border-radius: 50%;
-    background: linear-gradient(45deg, burlywood, #f39c12);
-    filter: blur(20px);
-    opacity: 0.3;
-    z-index: -1;
-}
-
-.avatar img {
-
-    transition: transform 0.3s ease;
-}
-
-.avatar:hover img {
-    transform: scale(1.05);
-}
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -350,10 +324,3 @@
     }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .avatar {
-        width: 200px;
-        height: 200px;
-    }
-}

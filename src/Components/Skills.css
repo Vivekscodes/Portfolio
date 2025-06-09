@@ -37,7 +37,8 @@
 
 .front,
 .back,
-.non {
+.non,
+.language{
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -46,7 +47,8 @@
 
 .front p,
 .back p,
-.non p {
+.non p,
+.language p {
     background: rgba(255, 255, 255, 0.05) !important;
     color: white !important;
     padding: 0.8rem 1.5rem !important;
@@ -59,7 +61,8 @@
 
 .front p:hover,
 .back p:hover,
-.non p:hover {
+.non p:hover,
+.language p:hover {
     transform: translateY(-3px);
     background: rgba(222, 184, 135, 0.1) !important;
     border-color: burlywood;

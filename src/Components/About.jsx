@@ -22,14 +22,14 @@ const About = () => {
                             eraseSpeed={100}
                             eraseDelay={1200}
                             typingDelay={200}
-                            cursorColor="#00ff88"
+                            cursorcolor="#00ff88"
                             className="typewriter-text"
                         />
                     </div>
 
                     <div className="cta-section">
                         <a
-                            href="https://drive.google.com/file/d/1IA3t4g_cx7NJ3P2B0QWAmOpEUZpcu1QV/view?usp=sharing"
+                            href="https://drive.google.com/file/d/10Y2jlBo4jyEcFhs9znIH_r9Kjk6uht2z/view?usp=sharing"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="resume-link"
@@ -44,12 +44,17 @@ const About = () => {
             </div>
 
             <div className='image-container'>
-                <div className="avatar">
-                    <img src="profile1.png" style={{ objectFit: 'cover', width: '100%', height: '100%', borderRadius: '50%' }} />
+                <div className="avatar-border">
+                    <div className="avatar-glow"></div>
+                    <img
+                        src="me.jpg"
+                        alt="Vivek Singh"
+                        className="avatar-image"
+                    />
 
                 </div>
             </div>
-        </div >
+        </div>
     )
 }
 
