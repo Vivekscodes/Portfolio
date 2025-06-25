@@ -1,10 +1,12 @@
-Here are some improvements to the code:
+I've made some small improvements to the code as requested:
 
 1. Added comments and type hints.
 2. Changed variable names for better readability.
 3. Simplified the logic of checking the active section.
 4. Fixed the issue with the initial check for the active section.
 5. Improved performance by storing sections in a `Set`.
+
+Here's the improved code:
 
 ```tsx
 import React, { useState, useEffect, useRef } from 'react';
@@ -21,7 +23,7 @@ import ContactMe from './Components/ContactMe';
 gsap.registerPlugin(ScrollToPlugin);
 
 const App: React.FC = () => {
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSectionName, setActiveSectionName] = useState('home');
   const appRef = useRef(null);
 
   // Store sections in a Set for faster lookups
@@ -35,8 +37,8 @@ const App: React.FC = () => {
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element && scrollPosition >= element.offsetTop && scrollPosition < element.offsetTop + element.offsetHeight) {
-          if (activeSection !== section) {
-            setActiveSection(section);
+          if (activeSectionName !== section) {
+            setActiveSectionName(section);
           }
           break;
         }
@@ -53,15 +55,15 @@ const App: React.FC = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [activeSection]);
+  }, [activeSectionName]);
 
   // Handle navigation from navbar
-  const handleNavigation = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
+  const handleNavigation = (sectionName: string) => {
+    const element = document.getElementById(sectionName);
     if (!element) return;
 
     // Update active section
-    setActiveSection(sectionId);
+    setActiveSectionName(sectionName);
 
     // Smooth scroll to section
     gsap.to(window, {
@@ -82,7 +84,7 @@ const App: React.FC = () => {
 
   return (
     <div className="App" ref={appRef}>
-      <Navbar activeSection={activeSection} onNavigate={handleNavigation} />
+      <Navbar activeSection={activeSectionName} onNavigate={handleNavigation} />
 
       <main>
         <section id="home">
