@@ -1,21 +1,18 @@
+```jsx
 import React from 'react'
 import './Me.css'
-import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa'
 
-
+// A functional component representing the 'About Me' section
 const Me = () => {
     return (
-        <div className='se'>
-            <div className='Me'>
-
-                <div className="avat">
-
-                    <img src="about.jpg" alt="about me" className="cover" style={{ objectFit: 'cover', width: '60%', height: '60%', borderRadius: '50%' }} />
-                </div>
-
-
+        <div className='self-introduction'>
+            <div className='avatar-container'>
+                {/* Display the author's image */}
+                <img src="about.jpg" alt="about me" className="avatar" style={{ objectFit: 'cover', width: '60%', height: '60%', borderRadius: '50%' }} />
             </div>
-            <div className="ab">
+
+            <div className="about">
                 <h2>
                     Hi there! I'm Vivek, a passionate developer and innovator dedicated to building solutions that enhance user experiences. With expertise in React JS, I specialize in creating dynamic, responsive web applications that bring ideas to life.
 
@@ -26,25 +23,14 @@ const Me = () => {
 
                     Let’s connect and create something amazing together!
                 </h2>
-                <hr>
-                </hr>
+                <hr />
+                {/* Social icons container */}
                 <div className="social-icons">
                     <h1 style={{ color: 'white', fontSize: '30px', fontFamily: 'arial' }}>Connect with me:</h1>
+                    {/* LinkedIn */}
                     <a href="..." target="_blank" rel="noopener noreferrer" className="linkedin-icon">
                         <FaLinkedin style={{ fontSize: '2em', color: '#0077B5' }} />
                     </a>
+                    {/* Github */}
                     <a href="https://github.com/Vivekscodes" target="_blank" rel="noopener noreferrer" className="github-icon">
                         <FaGithub style={{ fontSize: '2em', color: 'white' }} />
-                    </a>
-                    <a href="https://www.instagram.com/vivek_singhp20" target="_blank" rel="noopener noreferrer" className="instagram-icon">
-                        <FaInstagram style={{ fontSize: '2em', color: '#E1306C' }} />
-                    </a>
-                </div>
-            </div>
-
-        </div >
-
-    )
-}
-
-export default Me
